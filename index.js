@@ -37,7 +37,7 @@ exports.varchar255 = exports.text.max(255);
  */
 exports.arrayOf = function () {
 	var schemas = _.map(arguments, function (a) {
-		return typeof key === 'string' ? getSchema(a)[1] : a;
+		return typeof a === 'string' ? getSchema(a)[1] : a;
 	});
 	return Joi.array().items(schemas).single();
 };

@@ -1,0 +1,24 @@
+{
+  "name": "joi-helpers",
+  "version": "0.1.0",
+  "description": "A bunch for helpers to make the use of Joi less verbose.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Luotta/joi-helpers.git"
+  },
+  "keywords": [
+    "joi",
+    "validation",
+    "schema"
+  ],
+  "author": "Luotta Oy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Luotta/joi-helpers/issues"
+  },
+  "homepage": "https://github.com/Luotta/joi-helpers"
+}

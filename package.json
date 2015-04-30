@@ -20,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/Luotta/joi-helpers/issues"
   },
-  "homepage": "https://github.com/Luotta/joi-helpers"
+  "homepage": "https://github.com/Luotta/joi-helpers",
+  "dependencies": {
+    "joi": "^6.4.1",
+    "lodash": "^3.7.0"
+  }
 }

@@ -1,0 +1,17 @@
+{
+  "browser": false,
+  "node": true,
+  "esnext": false,
+  "globalstrict": true,
+  "quotmark": "single",
+  "smarttabs": true,
+  "trailing": true,
+  "undef": true,
+  "unused": true,
+  "latedef": false,
+  "laxcomma": true,
+  "eqeqeq": true,
+  "forin": true,
+  "predef": [],
+  "globals": {}
+}

@@ -1,6 +1,6 @@
 {
   "name": "joi-helpers",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "A bunch for helpers to make the use of Joi less verbose.",
   "main": "index.js",
   "scripts": {

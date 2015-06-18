@@ -30,19 +30,6 @@ exports.text = Joi.string().trim();
 exports.varchar255 = exports.text.max(255);
 
 /**
- * Validates an array just like Joi.array().items(...).single().
- * But accepts references to helpers types: validate.arrayOf('id').
- * @param  {Joi} schema... Schemas to accept
- * @return {Joi}
- */
-exports.arrayOf = function () {
-	var schemas = _.map(arguments, function (a) {
-		return typeof a === 'string' ? getSchema(a)[1] : a;
-	});
-	return Joi.array().items(schemas).single();
-};
-
-/**
  * Validate set of params
  * @param   {Object} obj The parameters to validate. For example
  *                       { id: 'id' } will validate against id above.
@@ -63,6 +50,21 @@ exports.params = function (/*obj | key1, key2, ...*/) {
 exports.extend = function (obj, newSchema) {
 	if (!obj.isJoi) throw new TypeError('Object must be a Joi object.');
 	return obj.keys(convertToSchema(newSchema));
+};
+
+/**
+ * Validates an array just like Joi.array().items(...).single().
+ * But accepts references to helpers types: validate.arrayOf('id').
+ * @param  {Joi} schema... Schemas to accept
+ * @return {Joi}
+ */
+exports.arrayOf = function () {
+	var schemas = _.map(arguments, function (a) {
+		if (typeof a === 'string') return getSchema(a)[1];
+		else if (typeof a === 'object' && !a.isJoi) return exports.params(a);
+		else return a;
+	});
+	return Joi.array().items(schemas).single();
 };
 
 /**

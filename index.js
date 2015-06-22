@@ -86,7 +86,7 @@ exports.an = _.create(exports);
 
 function getSchema(key) {
 	var matches = key.match(/^\[(.*)\]$/); // key in [] is optional
-	if (matches) return [matches[1], exports[matches[1]].optional()];
+	if (matches) return [matches[1], exports[matches[1]].optional().allow(null)];
 	return [key, exports[key].required()];
 }
 

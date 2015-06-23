@@ -4,7 +4,8 @@
   "description": "A bunch for helpers to make the use of Joi less verbose.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "changelog": "conventional-changelog -p angular > CHANGELOG.md"
   },
   "repository": {
     "type": "git",
@@ -24,5 +25,8 @@
   "dependencies": {
     "joi": "^6.4.1",
     "lodash": "^3.7.0"
+  },
+  "devDependencies": {
+    "conventional-changelog": "ajoslin/conventional-changelog"
   }
 }

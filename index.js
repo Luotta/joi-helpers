@@ -24,7 +24,7 @@ exports.slug = Joi.string().lowercase().regex(/^[a-z0-9-]{3,100}$/).options({
 exports.id = Joi.number().positive().integer();
 
 /** @type {Joi} Validates a text, trimming whitespace. */
-exports.text = Joi.string().trim();
+exports.text = Joi.string().allow('').trim();
 
 /** @type {Joi} Validates a VARCHAR(255) string. */
 exports.varchar255 = exports.text.max(255);

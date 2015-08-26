@@ -1,3 +1,13 @@
+<a name="0.3.1"></a>
+## 0.3.1 (2015-08-26)
+
+
+### Bug Fixes
+
+* **text:** Allow empty string by default ([da13170](https://github.com/Luotta/joi-helpers/commit/da13170))
+
+
+
 <a name="0.3.0"></a>
 # 0.3.0 (2015-06-23)
 
